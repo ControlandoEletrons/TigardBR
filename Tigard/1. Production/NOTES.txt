@@ -1,0 +1,29 @@
+Specifications:
+* 4 Layers
+* Top/Bottom Layer: 1oz copper
+* Inner Layer 1/2: 1oz copper
+* Dimensions: 46mm x 46mm
+* PCB Thickness: 1.6mm
+* Soldermask Color: 16-1358TCX or 152C
+* Silkscreen Color: Black
+* Surface Finish: ENIG-RoHS
+* Material Type: FR4
+* Flying Probe Test: Fully Test
+
+Gerbers:
+* tigard-F_Cu.gtl - top layer copper
+* tigard-GND.g2 - inner layer 1 copper
+* tigard-PWR.g3 - inner layer 2 copper
+* tigard-B_Cu.gbl - bottom layer copper
+* tigard-F_Paste.gtp - top paste
+* tigard-B_Paste.gbp - bottom paste
+* tigard-F_SilkS.gto - top silkscreen
+* tigard-B_SilkS.gbo - bottom silkscreen
+* tigard-F_Mask.gts - top mask
+* tigard-B_Mask.gbs - bottom mask
+* tigard-Edge_Cuts.gm1 - edge cuts
+* tigard.drl - drill
+* tigard-B_Fab.gbr - bottom reference designators (for reference only, DO NOT USE)
+* tigard-F_Fab.gbr - top reference designators (for reference only, DO NOT USE)
+
+Position File: tigard-top.pos
