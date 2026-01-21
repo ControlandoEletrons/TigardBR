@@ -364,7 +364,7 @@
 </package3d>
 </packages3d>
 <symbols>
-<symbol name="FT2232HQ" urn="urn:adsk.eagle:symbol:51246912/2" locally_modified="yes" library_version="82" library_locally_modified="yes">
+<symbol name="FT2232HQ" urn="urn:adsk.eagle:symbol:51246912/4" library_version="84">
 <wire x1="-28.575" y1="84.455" x2="28.575" y2="84.455" width="0.254" layer="94"/>
 <wire x1="28.575" y1="-85.09" x2="28.575" y2="84.455" width="0.254" layer="94"/>
 <wire x1="28.575" y1="-85.09" x2="-28.575" y2="-85.09" width="0.254" layer="94"/>
@@ -373,8 +373,8 @@
 <wire x1="16.51" y1="-2.54" x2="16.51" y2="-44.45" width="0.1524" layer="135"/>
 <text x="-27.94" y="88.392" size="1.778" layer="95">&gt;NAME</text>
 <text x="-27.94" y="85.852" size="1.778" layer="96">&gt;VALUE</text>
-<text x="15.24" y="22.86" size="1.27" layer="135" rot="R90" align="center">CHANNEL A</text>
-<text x="15.24" y="-23.495" size="1.27" layer="135" rot="R90" align="center">CHANNEL B</text>
+<text x="14.478" y="22.352" size="1.778" layer="135" rot="R90" align="center">CHANNEL A</text>
+<text x="14.478" y="-24.003" size="1.778" layer="135" rot="R90" align="center">CHANNEL B</text>
 <pin name="GND" x="8.89" y="-87.63" length="short" rot="R90"/>
 <pin name="OSCI" x="-31.115" y="-35.56" length="short"/>
 <pin name="OSCO" x="-31.115" y="-45.72" length="short"/>
@@ -473,7 +473,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="FT2232HQ" urn="urn:adsk.eagle:component:51246915/2" locally_modified="yes" prefix="U" library_version="82" library_locally_modified="yes">
+<deviceset name="FT2232HQ" urn="urn:adsk.eagle:component:51246915/4" prefix="U" library_version="84">
 <description>FT2232H Dual High Speed USB to Multipurpose UART/FIFO IC</description>
 <gates>
 <gate name="G$1" symbol="FT2232HQ" x="0" y="0"/>
@@ -1458,18 +1458,18 @@ Metric Code Size 5664</description>
 <pad name="1" x="-7.5" y="0" drill="0.85" diameter="1.2"/>
 <pad name="2" x="7.5" y="0" drill="0.85" diameter="1.2"/>
 </package>
-<package name="RN0602" library_version="63" library_locally_modified="yes">
+<package name="RN0602" urn="urn:adsk.eagle:footprint:51296377/1" library_version="64">
 <wire x1="-0.155" y1="1.9" x2="0.155" y2="1.9" width="0.127" layer="21"/>
 <wire x1="0.8" y1="1.9" x2="0.8" y2="-1.9" width="0.127" layer="51"/>
 <wire x1="-0.155" y1="-1.9" x2="0.155" y2="-1.9" width="0.127" layer="21"/>
 <wire x1="-0.8" y1="-1.9" x2="-0.8" y2="1.9" width="0.127" layer="51"/>
 <wire x1="-0.8" y1="1.9" x2="0.8" y2="1.9" width="0.127" layer="51"/>
 <wire x1="0.8" y1="-1.9" x2="-0.8" y2="-1.9" width="0.127" layer="51"/>
-<circle x="-1.8" y="1.75" radius="0.1" width="0.2" layer="21"/>
 <wire x1="-1.565" y1="2.17" x2="1.565" y2="2.17" width="0.05" layer="39"/>
 <wire x1="1.565" y1="2.17" x2="1.565" y2="-2.17" width="0.05" layer="39"/>
 <wire x1="1.565" y1="-2.17" x2="-1.565" y2="-2.17" width="0.05" layer="39"/>
 <wire x1="-1.565" y1="-2.17" x2="-1.565" y2="2.17" width="0.05" layer="39"/>
+<circle x="-1.8" y="1.75" radius="0.1" width="0.2" layer="21"/>
 <circle x="-1.8" y="1.75" radius="0.1" width="0.2" layer="51"/>
 <text x="0" y="2.7" size="0.8128" layer="25" font="vector" ratio="20" align="center">&gt;NAME</text>
 <polygon width="0.01" layer="29">
@@ -1928,6 +1928,11 @@ Metric Code Size 5664</description>
 <packageinstance name="ECQUAAF104K"/>
 </packageinstances>
 </package3d>
+<package3d name="RN0602" urn="urn:adsk.eagle:package:51296378/1" type="box" library_version="64">
+<packageinstances>
+<packageinstance name="RN0602"/>
+</packageinstances>
+</package3d>
 </packages3d>
 <symbols>
 <symbol name="R-" urn="urn:adsk.eagle:symbol:35509838/5" library_version="45">
@@ -1940,7 +1945,7 @@ Metric Code Size 5664</description>
 <text x="0" y="2.1336" size="1.524" layer="95" align="center">&gt;NAME</text>
 <text x="0" y="-2.159" size="1.524" layer="96" align="center">&gt;VALUE</text>
 </symbol>
-<symbol name="FB-" urn="urn:adsk.eagle:symbol:35509846/5" locally_modified="yes" library_version="63" library_locally_modified="yes">
+<symbol name="FB-" urn="urn:adsk.eagle:symbol:35509846/6" library_version="64">
 <pin name="1" x="-3.4925" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 <pin name="2" x="3.4925" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <text x="0" y="3.0226" size="1.524" layer="95" align="center">&gt;NAME</text>
@@ -1960,53 +1965,51 @@ Metric Code Size 5664</description>
 <rectangle x1="-2.032" y1="-2.032" x2="2.032" y2="-1.524" layer="94"/>
 <rectangle x1="-2.032" y1="-1.016" x2="2.032" y2="-0.508" layer="94"/>
 </symbol>
-<symbol name="RN8" library_version="63" library_locally_modified="yes">
+<symbol name="RN8" urn="urn:adsk.eagle:symbol:51296376/1" library_version="64">
 <pin name="16" x="5.08" y="8.89" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-5.08" y="8.89" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="15" x="5.08" y="6.35" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="2" x="-5.08" y="6.35" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="14" x="5.08" y="3.81" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="3" x="-5.08" y="3.81" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="13" x="5.08" y="1.27" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="4" x="-5.08" y="1.27" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="12" x="5.08" y="-1.27" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="5" x="-5.08" y="-1.27" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="11" x="5.08" y="-3.81" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="6" x="-5.08" y="-3.81" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="10" x="5.08" y="-6.35" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="7" x="-5.08" y="-6.35" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="9" x="5.08" y="-8.89" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="8" x="-5.08" y="-8.89" visible="off" length="short" direction="pas" swaplevel="1"/>
 <wire x1="-2.54" y1="8.001" x2="2.54" y2="8.001" width="0.254" layer="94"/>
 <wire x1="2.54" y1="9.779" x2="-2.54" y2="9.779" width="0.254" layer="94"/>
 <wire x1="2.54" y1="8.001" x2="2.54" y2="9.779" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="8.001" x2="-2.54" y2="9.779" width="0.254" layer="94"/>
-<text x="0" y="14.0716" size="1.524" layer="95" align="center">&gt;NAME</text>
-<text x="0" y="12.065" size="1.524" layer="96" align="center">&gt;VALUE</text>
-<pin name="15" x="5.08" y="6.35" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="2" x="-5.08" y="6.35" visible="off" length="short" direction="pas" swaplevel="1"/>
 <wire x1="-2.54" y1="5.461" x2="2.54" y2="5.461" width="0.254" layer="94"/>
 <wire x1="2.54" y1="7.239" x2="-2.54" y2="7.239" width="0.254" layer="94"/>
 <wire x1="2.54" y1="5.461" x2="2.54" y2="7.239" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="5.461" x2="-2.54" y2="7.239" width="0.254" layer="94"/>
-<pin name="14" x="5.08" y="3.81" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="3" x="-5.08" y="3.81" visible="off" length="short" direction="pas" swaplevel="1"/>
 <wire x1="-2.54" y1="2.921" x2="2.54" y2="2.921" width="0.254" layer="94"/>
 <wire x1="2.54" y1="4.699" x2="-2.54" y2="4.699" width="0.254" layer="94"/>
 <wire x1="2.54" y1="2.921" x2="2.54" y2="4.699" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="2.921" x2="-2.54" y2="4.699" width="0.254" layer="94"/>
-<pin name="13" x="5.08" y="1.27" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="4" x="-5.08" y="1.27" visible="off" length="short" direction="pas" swaplevel="1"/>
 <wire x1="-2.54" y1="0.381" x2="2.54" y2="0.381" width="0.254" layer="94"/>
 <wire x1="2.54" y1="2.159" x2="-2.54" y2="2.159" width="0.254" layer="94"/>
 <wire x1="2.54" y1="0.381" x2="2.54" y2="2.159" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="0.381" x2="-2.54" y2="2.159" width="0.254" layer="94"/>
-<pin name="12" x="5.08" y="-1.27" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="5" x="-5.08" y="-1.27" visible="off" length="short" direction="pas" swaplevel="1"/>
 <wire x1="-2.54" y1="-2.159" x2="2.54" y2="-2.159" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-0.381" x2="-2.54" y2="-0.381" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-2.159" x2="2.54" y2="-0.381" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="-2.159" x2="-2.54" y2="-0.381" width="0.254" layer="94"/>
-<pin name="11" x="5.08" y="-3.81" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="6" x="-5.08" y="-3.81" visible="off" length="short" direction="pas" swaplevel="1"/>
 <wire x1="-2.54" y1="-4.699" x2="2.54" y2="-4.699" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-2.921" x2="-2.54" y2="-2.921" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-4.699" x2="2.54" y2="-2.921" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="-4.699" x2="-2.54" y2="-2.921" width="0.254" layer="94"/>
-<pin name="10" x="5.08" y="-6.35" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="7" x="-5.08" y="-6.35" visible="off" length="short" direction="pas" swaplevel="1"/>
 <wire x1="-2.54" y1="-7.239" x2="2.54" y2="-7.239" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-5.461" x2="-2.54" y2="-5.461" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-7.239" x2="2.54" y2="-5.461" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="-7.239" x2="-2.54" y2="-5.461" width="0.254" layer="94"/>
-<pin name="9" x="5.08" y="-8.89" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="8" x="-5.08" y="-8.89" visible="off" length="short" direction="pas" swaplevel="1"/>
 <wire x1="-2.54" y1="-9.779" x2="2.54" y2="-9.779" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-8.001" x2="-2.54" y2="-8.001" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-9.779" x2="2.54" y2="-8.001" width="0.254" layer="94"/>
@@ -2015,6 +2018,8 @@ Metric Code Size 5664</description>
 <wire x1="-3.556" y1="-10.795" x2="3.556" y2="-10.795" width="0.1524" layer="94"/>
 <wire x1="3.556" y1="-10.795" x2="3.556" y2="10.795" width="0.1524" layer="94"/>
 <wire x1="3.556" y1="10.795" x2="-3.556" y2="10.795" width="0.1524" layer="94"/>
+<text x="0" y="14.0716" size="1.524" layer="95" align="center">&gt;NAME</text>
+<text x="0" y="12.065" size="1.524" layer="96" align="center">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2230,7 +2235,7 @@ Metric Code Size 5664</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="FB_" urn="urn:adsk.eagle:component:35509989/10" prefix="FB" library_version="63" library_locally_modified="yes">
+<deviceset name="FB_" urn="urn:adsk.eagle:component:35509989/11" prefix="FB" library_version="64">
 <description>&lt;b&gt;FERRITE BEAD&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="FB-" x="0" y="2.54"/>
@@ -2575,7 +2580,7 @@ Metric Code Size 5664</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="RN_" prefix="RN" library_version="63" library_locally_modified="yes">
+<deviceset name="RN_" urn="urn:adsk.eagle:component:51296379/1" prefix="RN" library_version="64">
 <gates>
 <gate name="G$1" symbol="RN8" x="-12.7" y="7.62"/>
 </gates>
@@ -2599,6 +2604,9 @@ Metric Code Size 5664</description>
 <connect gate="G$1" pin="8" pad="8"/>
 <connect gate="G$1" pin="9" pad="9"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:51296378/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -2803,7 +2811,7 @@ Exposes the minimal pins needed to implement a USB 2.x legacy device.</descripti
 <text x="0.127" y="3.937" size="1.524" layer="96" align="center">&gt;VALUE</text>
 <pin name="1.8V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
-<symbol name="VLOGIC" library_version="17" library_locally_modified="yes">
+<symbol name="VLOGIC" urn="urn:adsk.eagle:symbol:51296380/1" library_version="18">
 <circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
 <wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="94"/>
 <wire x1="0" y1="0.635" x2="0" y2="1.905" width="0.1524" layer="94"/>
@@ -2876,7 +2884,7 @@ Exposes the minimal pins needed to implement a USB 2.x legacy device.</descripti
 </device>
 </devices>
 </deviceset>
-<deviceset name="VLOGIC" prefix="SUPPLY" library_version="17" library_locally_modified="yes">
+<deviceset name="VLOGIC" urn="urn:adsk.eagle:component:51296381/1" prefix="SUPPLY" library_version="18">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="VLOGIC" x="0" y="0"/>
@@ -3252,7 +3260,7 @@ FAST TRANSIENT LOW DROPOUT LINEAR REGULATOR</description>
 </package3d>
 </packages3d>
 <symbols>
-<symbol name="DP4T-A-LATCH" urn="urn:adsk.eagle:symbol:51251421/2" locally_modified="yes" library_version="48" library_locally_modified="yes">
+<symbol name="DP4T-A-LATCH" urn="urn:adsk.eagle:symbol:51251421/3" library_version="49">
 <description>Double-Pole Four-Throw (DP4T) Latching Switch</description>
 <text x="0" y="9.652" size="1.778" layer="95" align="center">&gt;PART</text>
 <pin name="C" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
@@ -3291,7 +3299,7 @@ FAST TRANSIENT LOW DROPOUT LINEAR REGULATOR</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="DP4T-" urn="urn:adsk.eagle:component:51251423/2" prefix="SW" library_version="48" library_locally_modified="yes">
+<deviceset name="DP4T-" urn="urn:adsk.eagle:component:51251423/3" prefix="SW" library_version="49">
 <description>Double-Pole Four-Throw (DP4T) Latching Switch</description>
 <gates>
 <gate name="G$1" symbol="DP4T-A-LATCH" x="0" y="0"/>
@@ -3803,7 +3811,7 @@ Enhancement Mode Field Effect Transistor</description>
 </library>
 <library name="My-Crystals" urn="urn:adsk.eagle:library:35670754">
 <packages>
-<package name="3.2MM_2.5MM" library_version="5" library_locally_modified="yes">
+<package name="3.2MM_2.5MM" urn="urn:adsk.eagle:footprint:51296372/1" library_version="6">
 <description>3.2mm x 2.5mm</description>
 <smd name="1" x="-1.1" y="-0.85" dx="1.4" dy="1.2" layer="1"/>
 <smd name="2" x="1.1" y="-0.85" dx="1.4" dy="1.2" layer="1"/>
@@ -3821,27 +3829,35 @@ Enhancement Mode Field Effect Transistor</description>
 <circle x="-1.016" y="-2.159" radius="0.1524" width="0.4064" layer="21"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="3.2MM_2.5MM" urn="urn:adsk.eagle:package:51296374/1" type="box" library_version="6">
+<description>3.2mm x 2.5mm</description>
+<packageinstances>
+<packageinstance name="3.2MM_2.5MM"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
-<symbol name="OSC-CHASSI" library_version="5" library_locally_modified="yes">
+<symbol name="OSC-CHASSI" urn="urn:adsk.eagle:symbol:51296373/1" library_version="6">
 <wire x1="-0.635" y1="1.524" x2="-0.635" y2="-1.524" width="0.1524" layer="94"/>
 <wire x1="-0.635" y1="-1.524" x2="0.635" y2="-1.524" width="0.1524" layer="94"/>
 <wire x1="0.635" y1="-1.524" x2="0.635" y2="1.524" width="0.1524" layer="94"/>
 <wire x1="0.635" y1="1.524" x2="-0.635" y2="1.524" width="0.1524" layer="94"/>
 <wire x1="1.27" y1="1.778" x2="1.27" y2="-1.778" width="0.1524" layer="94"/>
 <wire x1="-1.27" y1="1.778" x2="-1.27" y2="-1.778" width="0.1524" layer="94"/>
-<text x="0" y="6.223" size="1.778" layer="95" align="center">&gt;NAME</text>
-<text x="0" y="4.2545" size="1.27" layer="96" align="center">&gt;VALUE</text>
-<pin name="OUT" x="3.81" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="IN" x="-3.81" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 <wire x1="-2.54" y1="3.048" x2="-2.54" y2="-3.175" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="-2.54" y1="-3.175" x2="2.667" y2="-3.175" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="2.667" y1="-3.175" x2="2.667" y2="3.048" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="2.667" y1="3.048" x2="-2.54" y2="3.048" width="0.1524" layer="94" style="shortdash"/>
+<text x="0" y="6.223" size="1.778" layer="95" align="center">&gt;NAME</text>
+<text x="0" y="4.2545" size="1.27" layer="96" align="center">&gt;VALUE</text>
+<pin name="OUT" x="3.81" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="IN" x="-3.81" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 <pin name="CH" x="0" y="-5.715" visible="off" length="short" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="OSC-CHASSI-" prefix="Y" library_version="5" library_locally_modified="yes">
+<deviceset name="OSC-CHASSI-" urn="urn:adsk.eagle:component:51296375/1" prefix="Y" library_version="6">
 <description>Crystal with pins connected to chassis.</description>
 <gates>
 <gate name="G$1" symbol="OSC-CHASSI" x="0" y="0"/>
@@ -3853,6 +3869,9 @@ Enhancement Mode Field Effect Transistor</description>
 <connect gate="G$1" pin="IN" pad="1"/>
 <connect gate="G$1" pin="OUT" pad="3"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:51296374/1"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="PN" value="X322512MSB4SI" constant="no"/>
@@ -4822,10 +4841,10 @@ Enhancement Mode Field Effect Transistor</description>
 <part name="C8" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="C_" device="0603" package3d_urn="urn:adsk.eagle:package:35509984/8" value="1uF"/>
 <part name="SUPPLY16" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="0V" device=""/>
 <part name="R4" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0603" package3d_urn="urn:adsk.eagle:package:35509946/7" value="10k"/>
-<part name="RN1" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="RN_" device="" value="100k">
+<part name="RN1" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="RN_" device="" package3d_urn="urn:adsk.eagle:package:51296378/1" value="100k">
 <attribute name="PN" value="EXB-2HV104JV"/>
 </part>
-<part name="RN2" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="RN_" device="" value="100R">
+<part name="RN2" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="RN_" device="" package3d_urn="urn:adsk.eagle:package:51296378/1" value="100R">
 <attribute name="PN" value="EXB-2HV101JV"/>
 </part>
 <part name="SUPPLY17" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="0V" device=""/>
@@ -4839,11 +4858,11 @@ Enhancement Mode Field Effect Transistor</description>
 <part name="C12" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="C_" device="0603" package3d_urn="urn:adsk.eagle:package:35509984/8" value="1uF"/>
 <part name="SUPPLY23" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="0V" device=""/>
 <part name="R5" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0603" package3d_urn="urn:adsk.eagle:package:35509946/7" value="10k"/>
-<part name="RN4" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="RN_" device="" value="100R">
+<part name="RN4" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="RN_" device="" package3d_urn="urn:adsk.eagle:package:51296378/1" value="100R">
 <attribute name="PN" value="EXB-2HV101JV"/>
 </part>
 <part name="SUPPLY24" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="0V" device=""/>
-<part name="RN5" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="RN_" device="" value="100k">
+<part name="RN5" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="RN_" device="" package3d_urn="urn:adsk.eagle:package:51296378/1" value="100k">
 <attribute name="PN" value="EXB-2HV104JV"/>
 </part>
 <part name="SUPPLY25" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="0V" device=""/>
@@ -4870,7 +4889,7 @@ Enhancement Mode Field Effect Transistor</description>
 <part name="R10" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0603" package3d_urn="urn:adsk.eagle:package:35509946/7" value="10k"/>
 <part name="R11" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0603" package3d_urn="urn:adsk.eagle:package:35509946/7" value="10k"/>
 <part name="R12" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0603" package3d_urn="urn:adsk.eagle:package:35509946/7" value="2.2k"/>
-<part name="Y1" library="My-Crystals" library_urn="urn:adsk.eagle:library:35670754" deviceset="OSC-CHASSI-" device="" value="12MHz"/>
+<part name="Y1" library="My-Crystals" library_urn="urn:adsk.eagle:library:35670754" deviceset="OSC-CHASSI-" device="" package3d_urn="urn:adsk.eagle:package:51296374/1" value="12MHz"/>
 <part name="C16" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="C_" device="0603" package3d_urn="urn:adsk.eagle:package:35509984/8" value="30pF"/>
 <part name="C17" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="C_" device="0603" package3d_urn="urn:adsk.eagle:package:35509984/8" value="30pF"/>
 <part name="SUPPLY36" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="0V" device=""/>
