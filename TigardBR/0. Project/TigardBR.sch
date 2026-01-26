@@ -8011,6 +8011,7 @@ DDEController.pdf</description>
 <schematic_group name="FLASH_MEMORY_CHIPS" titleSize="3.81" titleFont="vector"/>
 <schematic_group name="INPUT_BUFFER" titleSize="3.81" titleFont="vector"/>
 <schematic_group name="OUTPUT_BUFFER" titleSize="3.81" titleFont="vector"/>
+<schematic_group name="ESP32_UART_INTERFACE" titleSize="3.81" titleFont="vector"/>
 </groups>
 <parts>
 <part name="U1" library="My-ICs" library_urn="urn:adsk.eagle:library:35512106" deviceset="FT2232HQ" device="" package3d_urn="urn:adsk.eagle:package:51246914/2"/>
@@ -8216,16 +8217,22 @@ DDEController.pdf</description>
 <part name="U$6" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="NC" device=""/>
 <part name="U$7" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="NC" device=""/>
 <part name="U$8" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="NC" device=""/>
-<part name="R26" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0402" package3d_urn="urn:adsk.eagle:package:35509964/2" value="4k7 (5%)">
-<attribute name="PN" value="ERJ-2GEJ472X"/>
-</part>
-<part name="R27" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0402" package3d_urn="urn:adsk.eagle:package:35509964/2" value="4k7 (5%)">
-<attribute name="PN" value="ERJ-2GEJ472X"/>
-</part>
 <part name="Q3" library="My-Transistors" library_urn="urn:adsk.eagle:library:35671946" deviceset="NPN-" device="PMMT491" package3d_urn="urn:adsk.eagle:package:35671962/3" value="NPN-PMMT491"/>
 <part name="Q4" library="My-Transistors" library_urn="urn:adsk.eagle:library:35671946" deviceset="NPN-" device="PMMT491" package3d_urn="urn:adsk.eagle:package:35671962/3" value="NPN-PMMT491"/>
 <part name="R28" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0603" package3d_urn="urn:adsk.eagle:package:35509946/1" value="0R"/>
 <part name="R29" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0603" package3d_urn="urn:adsk.eagle:package:35509946/1" value="0R"/>
+<part name="R26" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0603" package3d_urn="urn:adsk.eagle:package:35509946/1" value="10k"/>
+<part name="R27" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0603" package3d_urn="urn:adsk.eagle:package:35509946/1" value="10k"/>
+<part name="R30" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0603" package3d_urn="urn:adsk.eagle:package:35509946/1" value="10k"/>
+<part name="SUPPLY73" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="VTARGET" device=""/>
+<part name="R31" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="R_" device="0603" package3d_urn="urn:adsk.eagle:package:35509946/1" value="10k"/>
+<part name="C31" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="C_" device="0603" package3d_urn="urn:adsk.eagle:package:35509984/8" value="1nF"/>
+<part name="C32" library="My-RLC" library_urn="urn:adsk.eagle:library:35509816" deviceset="C_" device="0603" package3d_urn="urn:adsk.eagle:package:35509984/8" value="1nF"/>
+<part name="SUPPLY75" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="0V" device=""/>
+<part name="SUPPLY76" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="0V" device=""/>
+<part name="JP6" library="My-PinHeaders" library_urn="urn:adsk.eagle:library:40188229" deviceset="PINHD-2X03" device="_2.54" package3d_urn="urn:adsk.eagle:package:40188692/1" value="ESP32 UART"/>
+<part name="SUPPLY77" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="VTARGET" device=""/>
+<part name="SUPPLY78" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="0V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8310,6 +8317,11 @@ DDEController.pdf</description>
 <text x="476.885" y="301.625" size="1.27" layer="135" align="center" grouprefs="FLASH_MEMORY_CHIPS">!HOLD!/!RESET!</text>
 <text x="450.85" y="262.89" size="1.27" layer="135" align="center">MISO</text>
 <text x="451.485" y="257.81" size="1.27" layer="135" rot="R180" align="center">SCLK</text>
+<text x="417.195" y="-40.64" size="1.27" layer="135" align="center" grouprefs="ESP32_UART_INTERFACE">!UART_DTR</text>
+<text x="417.195" y="-46.99" size="1.27" layer="135" align="center" grouprefs="ESP32_UART_INTERFACE">!UART_RTS</text>
+<text x="417.83" y="-64.135" size="1.27" layer="135" align="center" grouprefs="ESP32_UART_INTERFACE">UART_TX</text>
+<text x="417.83" y="-57.785" size="1.27" layer="135" align="center" grouprefs="ESP32_UART_INTERFACE">UART_RX</text>
+<text x="408.305" y="-13.97" size="1.27" layer="135" grouprefs="ESP32_UART_INTERFACE">With automatic download and run functionality.</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="118.745" y="98.425" smashed="yes" grouprefs="HIGH_SPEED_USB_INTERFACE">
@@ -8767,8 +8779,8 @@ DDEController.pdf</description>
 <attribute name="NAME" x="627.38" y="298.6532" size="1.524" layer="95" rot="R180" align="center"/>
 </instance>
 <instance part="R22" gate="G$1" x="627.38" y="290.83" smashed="yes">
-<attribute name="NAME" x="627.38" y="292.9636" size="1.524" layer="95" align="center"/>
-<attribute name="VALUE" x="627.38" y="288.671" size="1.524" layer="96" align="center"/>
+<attribute name="NAME" x="627.38" y="292.9636" size="1.27" layer="95" align="center"/>
+<attribute name="VALUE" x="627.38" y="288.671" size="1.27" layer="96" align="center"/>
 </instance>
 <instance part="JP2" gate="A" x="461.645" y="297.815" smashed="yes" grouprefs="FLASH_MEMORY_CHIPS">
 <attribute name="VALUE" x="462.915" y="307.34" size="1.778" layer="96" align="center"/>
@@ -8832,32 +8844,58 @@ DDEController.pdf</description>
 <instance part="U$6" gate="G$1" x="421.64" y="20.955" smashed="yes" grouprefs="INPUT_BUFFER"/>
 <instance part="U$7" gate="G$1" x="421.64" y="18.415" smashed="yes" grouprefs="INPUT_BUFFER"/>
 <instance part="U$8" gate="G$1" x="260.35" y="230.505" smashed="yes"/>
-<instance part="R26" gate="G$1" x="643.255" y="365.125" smashed="yes">
-<attribute name="PN" x="643.255" y="365.125" size="1.27" layer="96" font="vector" display="off"/>
-<attribute name="NAME" x="643.255" y="367.2586" size="1.27" layer="95" align="center"/>
-<attribute name="VALUE" x="643.255" y="363.22" size="1.27" layer="96" align="center"/>
+<instance part="Q3" gate="G$1" x="439.42" y="-41.91" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="NAME" x="443.484" y="-41.656" size="1.778" layer="95"/>
+<attribute name="FAMILY" x="443.484" y="-43.561" size="1.27" layer="96"/>
 </instance>
-<instance part="R27" gate="G$1" x="624.84" y="358.14" smashed="yes">
-<attribute name="PN" x="624.84" y="358.14" size="1.27" layer="96" font="vector" display="off"/>
-<attribute name="NAME" x="624.84" y="360.2736" size="1.27" layer="95" align="center"/>
-<attribute name="VALUE" x="624.84" y="356.235" size="1.27" layer="96" align="center"/>
+<instance part="Q4" gate="G$1" x="457.835" y="-48.26" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="NAME" x="461.899" y="-48.006" size="1.778" layer="95"/>
+<attribute name="FAMILY" x="461.899" y="-49.911" size="1.27" layer="96"/>
 </instance>
-<instance part="Q3" gate="G$1" x="634.365" y="365.125" smashed="yes" rot="MR0">
-<attribute name="NAME" x="630.301" y="365.379" size="1.778" layer="95" rot="MR0"/>
-<attribute name="FAMILY" x="630.301" y="363.474" size="1.27" layer="96" rot="MR0"/>
+<instance part="R28" gate="G$1" x="430.53" y="-59.055" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="NAME" x="430.53" y="-56.9214" size="1.27" layer="95" align="center"/>
+<attribute name="VALUE" x="430.53" y="-61.214" size="1.27" layer="96" align="center"/>
 </instance>
-<instance part="Q4" gate="G$1" x="615.95" y="358.14" smashed="yes" rot="MR0">
-<attribute name="NAME" x="611.886" y="358.394" size="1.778" layer="95" rot="MR0"/>
-<attribute name="FAMILY" x="611.886" y="356.489" size="1.27" layer="96" rot="MR0"/>
+<instance part="R29" gate="G$1" x="430.53" y="-65.405" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="NAME" x="430.53" y="-63.2714" size="1.27" layer="95" align="center"/>
+<attribute name="VALUE" x="430.53" y="-67.564" size="1.27" layer="96" align="center"/>
 </instance>
-<instance part="R28" gate="G$1" x="635" y="375.285" smashed="yes" rot="MR0">
-<attribute name="NAME" x="628.015" y="376.3264" size="1.524" layer="95" rot="MR0" align="center"/>
-<attribute name="VALUE" x="641.35" y="376.301" size="1.524" layer="96" rot="MR0" align="center"/>
+<instance part="R26" gate="G$1" x="430.53" y="-41.91" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="NAME" x="430.53" y="-39.7764" size="1.27" layer="95" align="center"/>
+<attribute name="VALUE" x="430.53" y="-44.069" size="1.27" layer="96" align="center"/>
 </instance>
-<instance part="R29" gate="G$1" x="635" y="372.745" smashed="yes" rot="MR0">
-<attribute name="NAME" x="628.015" y="373.761" size="1.524" layer="95" rot="MR0" align="center"/>
-<attribute name="VALUE" x="641.35" y="373.761" size="1.524" layer="96" rot="MR0" align="center"/>
+<instance part="R27" gate="G$1" x="448.945" y="-48.26" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="NAME" x="448.945" y="-46.1264" size="1.27" layer="95" align="center"/>
+<attribute name="VALUE" x="448.945" y="-50.419" size="1.27" layer="96" align="center"/>
 </instance>
+<instance part="R30" gate="G$1" x="475.615" y="-29.845" smashed="yes" rot="R90" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="NAME" x="473.4814" y="-29.845" size="1.27" layer="95" rot="R90" align="center"/>
+<attribute name="VALUE" x="477.774" y="-29.845" size="1.27" layer="96" rot="R90" align="center"/>
+</instance>
+<instance part="SUPPLY73" gate="G$1" x="475.615" y="-18.415" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="VALUE" x="475.6404" y="-13.97" size="2.54" layer="142" font="vector" ratio="20" align="center"/>
+</instance>
+<instance part="R31" gate="G$1" x="484.505" y="-29.845" smashed="yes" rot="R90" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="NAME" x="482.3714" y="-29.845" size="1.27" layer="95" rot="R90" align="center"/>
+<attribute name="VALUE" x="486.664" y="-29.845" size="1.27" layer="96" rot="R90" align="center"/>
+</instance>
+<instance part="C31" gate="G$1" x="475.615" y="-46.99" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="NAME" x="472.186" y="-48.3362" size="1.524" layer="95" rot="R90" align="center"/>
+<attribute name="VALUE" x="479.1075" y="-48.3616" size="1.524" layer="96" rot="R90" align="center"/>
+</instance>
+<instance part="C32" gate="G$1" x="484.505" y="-46.99" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="NAME" x="481.076" y="-48.3362" size="1.524" layer="95" rot="R90" align="center"/>
+<attribute name="VALUE" x="487.9975" y="-48.3616" size="1.524" layer="96" rot="R90" align="center"/>
+</instance>
+<instance part="SUPPLY75" gate="G$1" x="475.615" y="-56.515" smashed="yes" grouprefs="ESP32_UART_INTERFACE"/>
+<instance part="SUPPLY76" gate="G$1" x="484.505" y="-56.515" smashed="yes" grouprefs="ESP32_UART_INTERFACE"/>
+<instance part="JP6" gate="A" x="525.145" y="-50.165" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="VALUE" x="526.415" y="-43.18" size="1.778" layer="96" align="center"/>
+</instance>
+<instance part="SUPPLY77" gate="G$1" x="547.37" y="-37.465" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="VALUE" x="547.3954" y="-33.02" size="2.54" layer="142" font="vector" ratio="20" align="center"/>
+</instance>
+<instance part="SUPPLY78" gate="G$1" x="547.37" y="-62.23" smashed="yes" grouprefs="ESP32_UART_INTERFACE"/>
 </instances>
 <busses>
 </busses>
@@ -9154,6 +9192,22 @@ DDEController.pdf</description>
 <pinref part="SUPPLY70" gate="G$1" pin="0V"/>
 <wire x1="459.105" y1="295.275" x2="452.755" y2="295.275" width="0.1524" layer="91" grouprefs="FLASH_MEMORY_CHIPS"/>
 <wire x1="452.755" y1="295.275" x2="452.755" y2="288.925" width="0.1524" layer="91" grouprefs="FLASH_MEMORY_CHIPS"/>
+</segment>
+<segment>
+<pinref part="C31" gate="G$1" pin="2"/>
+<pinref part="SUPPLY75" gate="G$1" pin="0V"/>
+<wire x1="475.615" y1="-53.975" x2="475.615" y2="-52.07" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+</segment>
+<segment>
+<pinref part="C32" gate="G$1" pin="2"/>
+<pinref part="SUPPLY76" gate="G$1" pin="0V"/>
+<wire x1="484.505" y1="-53.975" x2="484.505" y2="-52.07" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="A" pin="4"/>
+<wire x1="530.225" y1="-50.165" x2="547.37" y2="-50.165" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="SUPPLY78" gate="G$1" pin="0V"/>
+<wire x1="547.37" y1="-59.69" x2="547.37" y2="-50.165" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 </net>
 <net name="USB_D+" class="0">
@@ -9593,6 +9647,22 @@ DDEController.pdf</description>
 <pinref part="R24" gate="G$1" pin="2"/>
 <pinref part="SUPPLY72" gate="G$1" pin="VTARGET"/>
 <wire x1="492.76" y1="314.325" x2="492.76" y2="312.42" width="0.1524" layer="91" grouprefs="FLASH_MEMORY_CHIPS"/>
+</segment>
+<segment>
+<pinref part="R30" gate="G$1" pin="2"/>
+<pinref part="SUPPLY73" gate="G$1" pin="VTARGET"/>
+<wire x1="475.615" y1="-20.955" x2="475.615" y2="-22.86" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="R31" gate="G$1" pin="2"/>
+<wire x1="475.615" y1="-22.86" x2="475.615" y2="-24.765" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="484.505" y1="-24.765" x2="484.505" y2="-22.86" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="484.505" y1="-22.86" x2="475.615" y2="-22.86" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<junction x="475.615" y="-22.86" grouprefs="ESP32_UART_INTERFACE"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="A" pin="2"/>
+<wire x1="530.225" y1="-47.625" x2="547.37" y2="-47.625" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="SUPPLY77" gate="G$1" pin="VTARGET"/>
+<wire x1="547.37" y1="-40.005" x2="547.37" y2="-47.625" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 </net>
 <net name="!USB_READY" class="0">
@@ -10391,6 +10461,17 @@ DDEController.pdf</description>
 <wire x1="539.75" y1="341.63" x2="523.24" y2="341.63" width="0.1524" layer="91"/>
 <label x="523.24" y="341.63" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<wire x1="460.375" y1="-53.34" x2="460.375" y2="-54.61" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="425.45" y1="-41.91" x2="423.545" y2="-41.91" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="460.375" y1="-54.61" x2="423.545" y2="-54.61" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="423.545" y1="-54.61" x2="423.545" y2="-41.91" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="412.115" y1="-41.91" x2="423.545" y2="-41.91" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<junction x="423.545" y="-41.91" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="Q4" gate="G$1" pin="E"/>
+<pinref part="R26" gate="G$1" pin="1"/>
+<label x="412.115" y="-41.91" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="ESP32_UART_INTERFACE"/>
+</segment>
 </net>
 <net name="AD2" class="0">
 <segment>
@@ -10402,6 +10483,15 @@ DDEController.pdf</description>
 <pinref part="JP3" gate="A" pin="5"/>
 <wire x1="539.75" y1="346.71" x2="523.24" y2="346.71" width="0.1524" layer="91"/>
 <label x="523.24" y="346.71" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<wire x1="441.96" y1="-46.99" x2="441.96" y2="-48.26" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="441.96" y1="-48.26" x2="443.865" y2="-48.26" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="412.115" y1="-48.26" x2="441.96" y2="-48.26" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<junction x="441.96" y="-48.26" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="Q3" gate="G$1" pin="E"/>
+<pinref part="R27" gate="G$1" pin="1"/>
+<label x="412.115" y="-48.26" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 </net>
 <net name="AD0" class="0">
@@ -10419,6 +10509,11 @@ DDEController.pdf</description>
 <pinref part="JP4" gate="A" pin="7"/>
 <wire x1="554.355" y1="213.36" x2="541.655" y2="213.36" width="0.1524" layer="91"/>
 <label x="541.655" y="213.36" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<wire x1="425.45" y1="-65.405" x2="412.75" y2="-65.405" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="R29" gate="G$1" pin="1"/>
+<label x="412.75" y="-65.405" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 </net>
 <net name="AD1" class="0">
@@ -10444,6 +10539,11 @@ DDEController.pdf</description>
 <pinref part="JP4" gate="A" pin="8"/>
 <wire x1="561.975" y1="213.36" x2="573.405" y2="213.36" width="0.1524" layer="91"/>
 <label x="573.405" y="213.36" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<wire x1="425.45" y1="-59.055" x2="412.75" y2="-59.055" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="R28" gate="G$1" pin="1"/>
+<label x="412.75" y="-59.055" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 </net>
 <net name="AD3" class="0">
@@ -10582,79 +10682,78 @@ DDEController.pdf</description>
 </net>
 <net name="ESP_EN" class="0">
 <segment>
-<wire x1="631.825" y1="370.205" x2="610.87" y2="370.205" width="0.1524" layer="91"/>
 <pinref part="Q3" gate="G$1" pin="C"/>
-<label x="610.87" y="370.205" size="1.27" layer="95" rot="MR0" xref="yes"/>
+<label x="487.68" y="-35.56" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="495.3" y1="-36.195" x2="475.615" y2="-36.195" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="475.615" y1="-36.195" x2="441.96" y2="-36.195" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="441.96" y1="-36.195" x2="441.96" y2="-36.83" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="R30" gate="G$1" pin="1"/>
+<wire x1="475.615" y1="-34.925" x2="475.615" y2="-36.195" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<junction x="475.615" y="-36.195" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="C31" gate="G$1" pin="1"/>
+<wire x1="475.615" y1="-44.45" x2="475.615" y2="-36.195" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="A" pin="1"/>
+<wire x1="522.605" y1="-47.625" x2="509.905" y2="-47.625" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<label x="509.905" y="-46.99" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 </net>
 <net name="ESP_IO0" class="0">
 <segment>
 <pinref part="Q4" gate="G$1" pin="C"/>
-<label x="610.87" y="367.665" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<wire x1="610.87" y1="367.665" x2="613.41" y2="367.665" width="0.1524" layer="91"/>
-<wire x1="613.41" y1="367.665" x2="613.41" y2="363.22" width="0.1524" layer="91"/>
+<label x="487.68" y="-41.91" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="495.3" y1="-42.545" x2="484.505" y2="-42.545" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="484.505" y1="-42.545" x2="460.375" y2="-42.545" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="460.375" y1="-42.545" x2="460.375" y2="-43.18" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="R31" gate="G$1" pin="1"/>
+<wire x1="484.505" y1="-34.925" x2="484.505" y2="-42.545" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<junction x="484.505" y="-42.545" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="C32" gate="G$1" pin="1"/>
+<wire x1="484.505" y1="-44.45" x2="484.505" y2="-42.545" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="A" pin="6"/>
+<wire x1="530.225" y1="-52.705" x2="542.925" y2="-52.705" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<label x="535.305" y="-52.07" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 </net>
 <net name="ESP_RX" class="0">
 <segment>
-<wire x1="629.92" y1="375.285" x2="610.87" y2="375.285" width="0.1524" layer="91"/>
-<label x="610.87" y="375.285" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<pinref part="R28" gate="G$1" pin="2"/>
+<wire x1="435.61" y1="-65.405" x2="495.3" y2="-65.405" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<label x="487.68" y="-64.77" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="R29" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="A" pin="5"/>
+<wire x1="522.605" y1="-52.705" x2="509.905" y2="-52.705" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<label x="509.905" y="-52.07" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 </net>
 <net name="N$46" class="0">
 <segment>
-<wire x1="638.175" y1="365.125" x2="636.905" y2="365.125" width="0.1524" layer="91"/>
-<pinref part="R26" gate="G$1" pin="1"/>
+<wire x1="435.61" y1="-41.91" x2="436.88" y2="-41.91" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
 <pinref part="Q3" gate="G$1" pin="B"/>
+<pinref part="R26" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$47" class="0">
 <segment>
-<pinref part="R27" gate="G$1" pin="1"/>
 <pinref part="Q4" gate="G$1" pin="B"/>
-<wire x1="618.49" y1="358.14" x2="619.76" y2="358.14" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$48" class="0">
-<segment>
-<wire x1="640.08" y1="375.285" x2="654.685" y2="375.285" width="0.1524" layer="91"/>
-<pinref part="R28" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$49" class="0">
-<segment>
-<wire x1="640.08" y1="372.745" x2="654.685" y2="372.745" width="0.1524" layer="91"/>
-<pinref part="R29" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="USB_DTR" class="0">
-<segment>
-<wire x1="613.41" y1="353.06" x2="613.41" y2="351.79" width="0.1524" layer="91"/>
-<wire x1="648.335" y1="365.125" x2="650.875" y2="365.125" width="0.1524" layer="91"/>
-<wire x1="613.41" y1="351.79" x2="650.875" y2="351.79" width="0.1524" layer="91"/>
-<wire x1="650.875" y1="351.79" x2="650.875" y2="365.125" width="0.1524" layer="91"/>
-<pinref part="R26" gate="G$1" pin="2"/>
-<wire x1="653.415" y1="365.125" x2="650.875" y2="365.125" width="0.1524" layer="91"/>
-<junction x="650.875" y="365.125"/>
-<pinref part="Q4" gate="G$1" pin="E"/>
-</segment>
-</net>
-<net name="USB_RTS" class="0">
-<segment>
-<wire x1="631.825" y1="360.045" x2="631.825" y2="358.14" width="0.1524" layer="91"/>
-<wire x1="631.825" y1="358.14" x2="629.92" y2="358.14" width="0.1524" layer="91"/>
+<wire x1="455.295" y1="-48.26" x2="454.025" y2="-48.26" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
 <pinref part="R27" gate="G$1" pin="2"/>
-<wire x1="653.415" y1="358.14" x2="631.825" y2="358.14" width="0.1524" layer="91"/>
-<junction x="631.825" y="358.14"/>
-<pinref part="Q3" gate="G$1" pin="E"/>
 </segment>
 </net>
 <net name="ESP_TX" class="0">
 <segment>
-<wire x1="629.92" y1="372.745" x2="610.87" y2="372.745" width="0.1524" layer="91"/>
-<label x="610.87" y="372.745" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<pinref part="R29" gate="G$1" pin="2"/>
+<wire x1="435.61" y1="-59.055" x2="495.3" y2="-59.055" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<label x="487.68" y="-58.42" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
+<pinref part="R28" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="A" pin="3"/>
+<wire x1="522.605" y1="-50.165" x2="509.905" y2="-50.165" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<label x="509.905" y="-49.53" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 </net>
 </nets>
