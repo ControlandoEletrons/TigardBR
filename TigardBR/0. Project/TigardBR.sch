@@ -9617,6 +9617,8 @@ DDEController.pdf</description>
 <attribute name="PN" value="CL10B104JB8NNNC"/>
 </part>
 <part name="U8" library="My-ICs" library_urn="urn:adsk.eagle:library:35512106" deviceset="QUAD-BUFFER-" device="" package3d_urn="urn:adsk.eagle:package:45650857/2" value="SN74AHC125"/>
+<part name="SUPPLY80" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="0V" device=""/>
+<part name="SUPPLY81" library="My-Supply" library_urn="urn:adsk.eagle:library:35531236" deviceset="VLOGIC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9706,10 +9708,20 @@ DDEController.pdf</description>
 <text x="417.83" y="-64.135" size="1.27" layer="135" align="center" grouprefs="ESP32_UART_INTERFACE">UART_TX</text>
 <text x="417.83" y="-57.785" size="1.27" layer="135" align="center" grouprefs="ESP32_UART_INTERFACE">UART_RX</text>
 <text x="408.305" y="-13.97" size="1.27" layer="135" grouprefs="ESP32_UART_INTERFACE">With automatic download and run functionality.</text>
-<text x="680.72" y="-80.645" size="1.27" layer="135" align="center">TDI</text>
-<text x="680.085" y="-35.56" size="1.27" layer="135" align="center">TMS</text>
-<text x="679.45" y="-66.04" size="1.27" layer="135" align="center">TDO</text>
-<text x="680.085" y="-95.885" size="1.27" layer="135" align="center">TCK</text>
+<text x="672.465" y="-85.09" size="1.27" layer="135" align="center">TDI</text>
+<text x="672.465" y="-35.56" size="1.27" layer="135" align="center">TMS</text>
+<text x="672.465" y="-67.945" size="1.27" layer="135" align="center">TDO</text>
+<text x="672.465" y="-102.87" size="1.27" layer="135" align="center">TCK</text>
+<wire x1="648.97" y1="-29.21" x2="648.97" y2="-110.49" width="0.1524" layer="137" style="shortdash"/>
+<wire x1="648.97" y1="-110.49" x2="675.005" y2="-110.49" width="0.1524" layer="137" style="shortdash"/>
+<wire x1="675.005" y1="-110.49" x2="675.005" y2="-29.21" width="0.1524" layer="137" style="shortdash"/>
+<wire x1="675.005" y1="-29.21" x2="648.97" y2="-29.21" width="0.1524" layer="137" style="shortdash"/>
+<wire x1="704.215" y1="-29.21" x2="704.215" y2="-110.49" width="0.1524" layer="137" style="shortdash"/>
+<wire x1="704.215" y1="-110.49" x2="717.55" y2="-110.49" width="0.1524" layer="137" style="shortdash"/>
+<wire x1="717.55" y1="-110.49" x2="717.55" y2="-29.21" width="0.1524" layer="137" style="shortdash"/>
+<wire x1="717.55" y1="-29.21" x2="704.215" y2="-29.21" width="0.1524" layer="137" style="shortdash"/>
+<text x="661.67" y="-31.115" size="1.778" layer="137" align="center">FTDI</text>
+<text x="711.2" y="-31.115" size="1.778" layer="137" align="center">TARGET</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="118.745" y="98.425" smashed="yes" grouprefs="HIGH_SPEED_USB_INTERFACE">
@@ -10245,13 +10257,13 @@ DDEController.pdf</description>
 </instance>
 <instance part="SUPPLY75" gate="G$1" x="479.425" y="-56.515" smashed="yes" grouprefs="ESP32_UART_INTERFACE"/>
 <instance part="SUPPLY76" gate="G$1" x="489.585" y="-56.515" smashed="yes" grouprefs="ESP32_UART_INTERFACE"/>
-<instance part="JP6" gate="A" x="525.145" y="-50.165" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
-<attribute name="VALUE" x="526.415" y="-43.18" size="1.778" layer="96" align="center"/>
+<instance part="JP6" gate="A" x="523.875" y="-33.02" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="VALUE" x="525.145" y="-26.035" size="1.778" layer="96" align="center"/>
 </instance>
-<instance part="SUPPLY77" gate="G$1" x="547.37" y="-37.465" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
-<attribute name="VALUE" x="547.3954" y="-33.02" size="2.54" layer="142" font="vector" ratio="20" align="center"/>
+<instance part="SUPPLY77" gate="G$1" x="546.1" y="-20.32" smashed="yes" grouprefs="ESP32_UART_INTERFACE">
+<attribute name="VALUE" x="546.1254" y="-15.875" size="2.54" layer="142" font="vector" ratio="20" align="center"/>
 </instance>
-<instance part="SUPPLY78" gate="G$1" x="547.37" y="-62.23" smashed="yes" grouprefs="ESP32_UART_INTERFACE"/>
+<instance part="SUPPLY78" gate="G$1" x="546.1" y="-45.085" smashed="yes" grouprefs="ESP32_UART_INTERFACE"/>
 <instance part="D4" gate="G$1" x="89.535" y="252.73" smashed="yes" grouprefs="POWER_SUPPLY">
 <attribute name="NAME" x="89.535" y="258.1148" size="1.524" layer="95" align="center"/>
 <attribute name="VALUE" x="89.535" y="255.9558" size="1.524" layer="96" align="center"/>
@@ -10303,61 +10315,65 @@ DDEController.pdf</description>
 <attribute name="NAME" x="594.995" y="-20.447" size="1.524" layer="95" align="center"/>
 <attribute name="VALUE" x="594.995" y="-22.987" size="1.524" layer="96" align="center"/>
 </instance>
-<instance part="D6" gate="G$1" x="600.71" y="-46.355" smashed="yes" rot="R90">
-<attribute name="NAME" x="597.8525" y="-46.355" size="1.524" layer="95" rot="R90" align="center"/>
-<attribute name="VALUE" x="603.1865" y="-46.355" size="1.524" layer="96" rot="R90" align="center"/>
+<instance part="D6" gate="G$1" x="592.455" y="-46.355" smashed="yes" rot="R90">
+<attribute name="NAME" x="589.5975" y="-46.355" size="1.524" layer="95" rot="R90" align="center"/>
+<attribute name="VALUE" x="594.9315" y="-46.355" size="1.524" layer="96" rot="R90" align="center"/>
 </instance>
-<instance part="R32" gate="G$1" x="592.455" y="-46.355" smashed="yes" rot="R90">
-<attribute name="NAME" x="590.3214" y="-46.355" size="1.524" layer="95" rot="R90" align="center"/>
-<attribute name="VALUE" x="594.614" y="-46.355" size="1.524" layer="96" rot="R90" align="center"/>
-<attribute name="PN" x="592.455" y="-46.355" size="1.778" layer="96" display="off"/>
+<instance part="R32" gate="G$1" x="584.835" y="-46.355" smashed="yes" rot="R90">
+<attribute name="NAME" x="582.7014" y="-46.355" size="1.524" layer="95" rot="R90" align="center"/>
+<attribute name="VALUE" x="586.994" y="-46.355" size="1.524" layer="96" rot="R90" align="center"/>
+<attribute name="PN" x="584.835" y="-46.355" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="SUPPLY74" gate="G$1" x="592.455" y="-60.96" smashed="yes"/>
+<instance part="SUPPLY74" gate="G$1" x="584.835" y="-63.5" smashed="yes"/>
 <instance part="C4" gate="G$1" x="584.835" y="-30.48" smashed="yes">
 <attribute name="NAME" x="581.406" y="-31.8262" size="1.524" layer="95" rot="R90" align="center"/>
 <attribute name="VALUE" x="588.3275" y="-31.8516" size="1.524" layer="96" rot="R90" align="center"/>
 <attribute name="PN" x="584.835" y="-30.48" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="U3" gate="-A" x="631.19" y="-40.005" smashed="yes">
-<attribute name="NAME" x="633.73" y="-34.925" size="1.27" layer="95"/>
-<attribute name="VALUE" x="633.73" y="-36.83" size="1.27" layer="96"/>
+<instance part="U3" gate="-A" x="614.045" y="-46.355" smashed="yes">
+<attribute name="NAME" x="616.585" y="-41.275" size="1.27" layer="95"/>
+<attribute name="VALUE" x="616.585" y="-43.18" size="1.27" layer="96"/>
 </instance>
-<instance part="U3" gate="G$2" x="631.19" y="-40.005" smashed="yes"/>
+<instance part="U3" gate="G$2" x="614.045" y="-46.355" smashed="yes"/>
 <instance part="SUPPLY79" gate="G$1" x="584.835" y="-21.59" smashed="yes">
 <attribute name="VALUE" x="584.8604" y="-17.145" size="2.54" layer="142" font="vector" ratio="20" align="center"/>
 </instance>
-<instance part="C33" gate="G$1" x="609.6" y="-39.37" smashed="yes">
-<attribute name="NAME" x="606.171" y="-40.7162" size="1.524" layer="95" rot="R90" align="center"/>
-<attribute name="VALUE" x="613.0925" y="-40.7416" size="1.524" layer="96" rot="R90" align="center"/>
+<instance part="C33" gate="G$1" x="608.965" y="-33.02" smashed="yes" rot="R270">
+<attribute name="NAME" x="607.6188" y="-29.591" size="1.524" layer="95" align="center"/>
+<attribute name="VALUE" x="607.5934" y="-36.5125" size="1.524" layer="96" align="center"/>
 </instance>
-<instance part="D2" gate="G$1" x="652.145" y="-40.005" smashed="yes">
-<attribute name="NAME" x="652.145" y="-37.1475" size="1.524" layer="95" align="center"/>
-<attribute name="VALUE" x="652.145" y="-42.4815" size="1.524" layer="96" align="center"/>
+<instance part="D2" gate="G$1" x="635.635" y="-38.735" smashed="yes">
+<attribute name="NAME" x="635.635" y="-35.8775" size="1.524" layer="95" align="center"/>
+<attribute name="VALUE" x="635.635" y="-41.2115" size="1.524" layer="96" align="center"/>
 </instance>
-<instance part="R33" gate="G$1" x="652.145" y="-31.75" smashed="yes">
-<attribute name="NAME" x="652.145" y="-29.6164" size="1.524" layer="95" align="center"/>
-<attribute name="VALUE" x="652.145" y="-33.909" size="1.524" layer="96" align="center"/>
-<attribute name="PN" x="652.145" y="-31.75" size="1.778" layer="96" rot="R270" display="off"/>
+<instance part="R33" gate="G$1" x="635.635" y="-46.355" smashed="yes">
+<attribute name="NAME" x="635.635" y="-44.2214" size="1.524" layer="95" align="center"/>
+<attribute name="VALUE" x="635.635" y="-48.514" size="1.524" layer="96" align="center"/>
+<attribute name="PN" x="635.635" y="-46.355" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
-<instance part="C35" gate="G$1" x="665.48" y="-49.53" smashed="yes">
-<attribute name="NAME" x="662.051" y="-50.8762" size="1.524" layer="95" rot="R90" align="center"/>
-<attribute name="VALUE" x="668.9725" y="-50.9016" size="1.524" layer="96" rot="R90" align="center"/>
-<attribute name="PN" x="665.48" y="-49.53" size="1.778" layer="96" display="off"/>
+<instance part="C35" gate="G$1" x="643.89" y="-51.435" smashed="yes">
+<attribute name="NAME" x="640.461" y="-52.7812" size="1.524" layer="95" rot="R90" align="center"/>
+<attribute name="VALUE" x="647.3825" y="-52.8066" size="1.524" layer="96" rot="R90" align="center"/>
+<attribute name="PN" x="643.89" y="-51.435" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="U8" gate="-A" x="688.975" y="-37.465" smashed="yes">
-<attribute name="NAME" x="690.88" y="-31.75" size="1.524" layer="95"/>
-<attribute name="VALUE" x="690.88" y="-33.655" size="1.524" layer="96"/>
+<instance part="U8" gate="-A" x="687.705" y="-37.465" smashed="yes">
+<attribute name="NAME" x="689.61" y="-31.75" size="1.524" layer="95"/>
+<attribute name="VALUE" x="689.61" y="-33.655" size="1.524" layer="96"/>
 </instance>
-<instance part="U8" gate="-B" x="690.88" y="-67.945" smashed="yes" rot="MR0">
-<attribute name="NAME" x="685.8" y="-62.23" size="1.524" layer="95" rot="MR180"/>
+<instance part="U8" gate="-B" x="689.61" y="-69.85" smashed="yes" rot="MR0">
+<attribute name="NAME" x="684.53" y="-64.135" size="1.524" layer="95" rot="MR180"/>
 </instance>
-<instance part="U8" gate="-C" x="688.975" y="-82.55" smashed="yes">
-<attribute name="NAME" x="690.245" y="-78.74" size="1.524" layer="95"/>
+<instance part="U8" gate="-C" x="687.705" y="-86.995" smashed="yes">
+<attribute name="NAME" x="688.975" y="-83.185" size="1.524" layer="95"/>
 </instance>
-<instance part="U8" gate="-D" x="688.975" y="-97.79" smashed="yes">
-<attribute name="NAME" x="690.245" y="-93.98" size="1.524" layer="95"/>
+<instance part="U8" gate="-D" x="687.705" y="-104.775" smashed="yes">
+<attribute name="NAME" x="688.975" y="-100.965" size="1.524" layer="95"/>
 </instance>
-<instance part="U8" gate="G$5" x="688.975" y="-37.465" smashed="yes"/>
+<instance part="U8" gate="G$5" x="687.705" y="-37.465" smashed="yes"/>
+<instance part="SUPPLY80" gate="G$1" x="601.345" y="-38.1" smashed="yes"/>
+<instance part="SUPPLY81" gate="G$1" x="629.92" y="-17.78" smashed="yes">
+<attribute name="VALUE" x="629.9454" y="-13.335" size="2.54" layer="141" font="vector" ratio="20" align="center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10671,35 +10687,37 @@ DDEController.pdf</description>
 </segment>
 <segment>
 <pinref part="JP6" gate="A" pin="4"/>
-<wire x1="530.225" y1="-50.165" x2="547.37" y2="-50.165" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="528.955" y1="-33.02" x2="546.1" y2="-33.02" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
 <pinref part="SUPPLY78" gate="G$1" pin="0V"/>
-<wire x1="547.37" y1="-59.69" x2="547.37" y2="-50.165" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="546.1" y1="-42.545" x2="546.1" y2="-33.02" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 <segment>
 <pinref part="R32" gate="G$1" pin="1"/>
 <pinref part="SUPPLY74" gate="G$1" pin="0V"/>
-<wire x1="592.455" y1="-58.42" x2="592.455" y2="-56.515" width="0.1524" layer="91"/>
+<wire x1="584.835" y1="-60.96" x2="584.835" y2="-59.055" width="0.1524" layer="91"/>
 <pinref part="D6" gate="G$1" pin="A"/>
-<wire x1="592.455" y1="-56.515" x2="592.455" y2="-51.435" width="0.1524" layer="91"/>
-<wire x1="600.71" y1="-50.165" x2="600.71" y2="-56.515" width="0.1524" layer="91"/>
-<wire x1="600.71" y1="-56.515" x2="592.455" y2="-56.515" width="0.1524" layer="91"/>
-<junction x="592.455" y="-56.515"/>
+<wire x1="584.835" y1="-59.055" x2="584.835" y2="-51.435" width="0.1524" layer="91"/>
+<wire x1="592.455" y1="-50.165" x2="592.455" y2="-59.055" width="0.1524" layer="91"/>
+<wire x1="592.455" y1="-59.055" x2="584.835" y2="-59.055" width="0.1524" layer="91"/>
+<junction x="584.835" y="-59.055"/>
 <pinref part="U3" gate="G$2" pin="VSS"/>
-<wire x1="631.19" y1="-46.355" x2="631.19" y2="-56.515" width="0.1524" layer="91"/>
-<wire x1="631.19" y1="-56.515" x2="609.6" y2="-56.515" width="0.1524" layer="91"/>
-<junction x="600.71" y="-56.515"/>
-<pinref part="C33" gate="G$1" pin="2"/>
-<wire x1="609.6" y1="-56.515" x2="600.71" y2="-56.515" width="0.1524" layer="91"/>
-<wire x1="609.6" y1="-44.45" x2="609.6" y2="-56.515" width="0.1524" layer="91"/>
-<junction x="609.6" y="-56.515"/>
+<wire x1="614.045" y1="-52.705" x2="614.045" y2="-59.055" width="0.1524" layer="91"/>
+<wire x1="614.045" y1="-59.055" x2="592.455" y2="-59.055" width="0.1524" layer="91"/>
+<junction x="592.455" y="-59.055"/>
 <pinref part="C35" gate="G$1" pin="2"/>
-<wire x1="665.48" y1="-54.61" x2="665.48" y2="-56.515" width="0.1524" layer="91"/>
-<wire x1="665.48" y1="-56.515" x2="631.19" y2="-56.515" width="0.1524" layer="91"/>
-<junction x="631.19" y="-56.515"/>
+<wire x1="643.89" y1="-56.515" x2="643.89" y2="-59.055" width="0.1524" layer="91"/>
+<wire x1="643.89" y1="-59.055" x2="614.045" y2="-59.055" width="0.1524" layer="91"/>
+<junction x="614.045" y="-59.055"/>
 <pinref part="U8" gate="G$5" pin="VSS"/>
-<wire x1="688.975" y1="-43.815" x2="688.975" y2="-56.515" width="0.1524" layer="91"/>
-<wire x1="688.975" y1="-56.515" x2="665.48" y2="-56.515" width="0.1524" layer="91"/>
-<junction x="665.48" y="-56.515"/>
+<wire x1="687.705" y1="-43.815" x2="687.705" y2="-59.055" width="0.1524" layer="91"/>
+<wire x1="687.705" y1="-59.055" x2="643.89" y2="-59.055" width="0.1524" layer="91"/>
+<junction x="643.89" y="-59.055"/>
+</segment>
+<segment>
+<pinref part="C33" gate="G$1" pin="2"/>
+<wire x1="603.885" y1="-33.02" x2="601.345" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="601.345" y1="-33.02" x2="601.345" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="SUPPLY80" gate="G$1" pin="0V"/>
 </segment>
 </net>
 <net name="USB_D+" class="0">
@@ -11127,9 +11145,9 @@ DDEController.pdf</description>
 </segment>
 <segment>
 <pinref part="JP6" gate="A" pin="2"/>
-<wire x1="530.225" y1="-47.625" x2="547.37" y2="-47.625" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="528.955" y1="-30.48" x2="546.1" y2="-30.48" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
 <pinref part="SUPPLY77" gate="G$1" pin="VTARGET"/>
-<wire x1="547.37" y1="-40.005" x2="547.37" y2="-47.625" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="546.1" y1="-22.86" x2="546.1" y2="-30.48" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 <segment>
 <pinref part="M6" gate="G$1" pin="S"/>
@@ -11813,8 +11831,8 @@ DDEController.pdf</description>
 <pinref part="JP5" gate="A" pin="3"/>
 </segment>
 <segment>
-<wire x1="682.625" y1="-97.155" x2="678.18" y2="-97.155" width="0.1524" layer="91"/>
-<label x="678.18" y="-97.155" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="681.355" y1="-104.14" x2="670.56" y2="-104.14" width="0.1524" layer="91"/>
+<label x="670.56" y="-104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U8" gate="-D" pin="A"/>
 </segment>
 </net>
@@ -11860,8 +11878,8 @@ DDEController.pdf</description>
 <label x="573.405" y="220.98" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="682.625" y1="-81.915" x2="678.815" y2="-81.915" width="0.1524" layer="91"/>
-<label x="678.815" y="-81.915" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="681.355" y1="-86.36" x2="670.56" y2="-86.36" width="0.1524" layer="91"/>
+<label x="670.56" y="-86.36" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U8" gate="-C" pin="A"/>
 </segment>
 </net>
@@ -11892,8 +11910,8 @@ DDEController.pdf</description>
 <label x="573.405" y="218.44" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="682.625" y1="-36.83" x2="678.18" y2="-36.83" width="0.1524" layer="91"/>
-<label x="678.18" y="-36.83" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="681.355" y1="-36.83" x2="670.56" y2="-36.83" width="0.1524" layer="91"/>
+<label x="670.56" y="-36.83" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U8" gate="-A" pin="A"/>
 </segment>
 </net>
@@ -12148,8 +12166,8 @@ DDEController.pdf</description>
 <pinref part="JP5" gate="A" pin="1"/>
 </segment>
 <segment>
-<wire x1="681.99" y1="-67.31" x2="676.91" y2="-67.31" width="0.1524" layer="91"/>
-<label x="676.91" y="-67.31" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="680.72" y1="-69.215" x2="670.56" y2="-69.215" width="0.1524" layer="91"/>
+<label x="670.56" y="-69.215" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U8" gate="-B" pin="Y"/>
 </segment>
 </net>
@@ -12191,13 +12209,13 @@ DDEController.pdf</description>
 </segment>
 <segment>
 <pinref part="JP6" gate="A" pin="1"/>
-<wire x1="522.605" y1="-47.625" x2="509.905" y2="-47.625" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
-<label x="509.905" y="-46.99" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="521.335" y1="-30.48" x2="508.635" y2="-30.48" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<label x="508.635" y="-29.845" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 <segment>
 <pinref part="U3" gate="-A" pin="A"/>
-<wire x1="624.84" y1="-40.005" x2="622.3" y2="-40.005" width="0.1524" layer="91"/>
-<label x="623.57" y="-38.1" size="1.27" layer="95" rot="R180"/>
+<wire x1="607.695" y1="-46.355" x2="600.075" y2="-46.355" width="0.1524" layer="91"/>
+<label x="600.075" y="-45.72" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="ESP_IO0" class="0">
@@ -12215,8 +12233,8 @@ DDEController.pdf</description>
 </segment>
 <segment>
 <pinref part="JP6" gate="A" pin="6"/>
-<wire x1="530.225" y1="-52.705" x2="542.925" y2="-52.705" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
-<label x="535.305" y="-52.07" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="528.955" y1="-35.56" x2="541.655" y2="-35.56" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<label x="534.035" y="-34.925" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 </net>
 <net name="ESP_RX" class="0">
@@ -12227,8 +12245,8 @@ DDEController.pdf</description>
 </segment>
 <segment>
 <pinref part="JP6" gate="A" pin="5"/>
-<wire x1="522.605" y1="-52.705" x2="509.905" y2="-52.705" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
-<label x="509.905" y="-52.07" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="521.335" y1="-35.56" x2="508.635" y2="-35.56" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<label x="508.635" y="-34.925" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 </net>
 <net name="N$46" class="0">
@@ -12253,8 +12271,8 @@ DDEController.pdf</description>
 </segment>
 <segment>
 <pinref part="JP6" gate="A" pin="3"/>
-<wire x1="522.605" y1="-50.165" x2="509.905" y2="-50.165" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
-<label x="509.905" y="-49.53" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
+<wire x1="521.335" y1="-33.02" x2="508.635" y2="-33.02" width="0.1524" layer="91" grouprefs="ESP32_UART_INTERFACE"/>
+<label x="508.635" y="-32.385" size="1.27" layer="95" grouprefs="ESP32_UART_INTERFACE"/>
 </segment>
 </net>
 <net name="N$48" class="0">
@@ -12286,92 +12304,106 @@ DDEController.pdf</description>
 <net name="N$49" class="0">
 <segment>
 <pinref part="M6" gate="G$1" pin="G"/>
-<pinref part="R32" gate="G$1" pin="2"/>
-<wire x1="592.455" y1="-41.275" x2="592.455" y2="-39.37" width="0.1524" layer="91"/>
-<pinref part="D6" gate="G$1" pin="K"/>
-<wire x1="592.455" y1="-39.37" x2="592.455" y2="-37.465" width="0.1524" layer="91"/>
-<wire x1="592.455" y1="-37.465" x2="592.455" y2="-31.115" width="0.1524" layer="91"/>
-<wire x1="600.71" y1="-42.545" x2="600.71" y2="-39.37" width="0.1524" layer="91"/>
-<wire x1="600.71" y1="-39.37" x2="592.455" y2="-39.37" width="0.1524" layer="91"/>
-<junction x="592.455" y="-39.37"/>
+<wire x1="592.455" y1="-38.1" x2="592.455" y2="-31.115" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="584.835" y1="-35.56" x2="584.835" y2="-37.465" width="0.1524" layer="91"/>
-<wire x1="584.835" y1="-37.465" x2="592.455" y2="-37.465" width="0.1524" layer="91"/>
-<junction x="592.455" y="-37.465"/>
+<wire x1="584.835" y1="-35.56" x2="584.835" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="584.835" y1="-38.1" x2="592.455" y2="-38.1" width="0.1524" layer="91"/>
+<pinref part="R32" gate="G$1" pin="2"/>
+<wire x1="584.835" y1="-41.275" x2="584.835" y2="-38.1" width="0.1524" layer="91"/>
+<junction x="584.835" y="-38.1"/>
+<pinref part="D6" gate="G$1" pin="K"/>
+<wire x1="592.455" y1="-42.545" x2="592.455" y2="-38.1" width="0.1524" layer="91"/>
+<junction x="592.455" y="-38.1"/>
 </segment>
 </net>
 <net name="N$50" class="0">
 <segment>
 <pinref part="M6" gate="G$1" pin="D"/>
 <pinref part="U3" gate="G$2" pin="VDD"/>
-<wire x1="600.075" y1="-26.035" x2="609.6" y2="-26.035" width="0.1524" layer="91"/>
-<wire x1="609.6" y1="-26.035" x2="631.19" y2="-26.035" width="0.1524" layer="91"/>
-<wire x1="631.19" y1="-26.035" x2="631.19" y2="-33.655" width="0.1524" layer="91"/>
-<pinref part="C33" gate="G$1" pin="1"/>
-<wire x1="609.6" y1="-36.83" x2="609.6" y2="-26.035" width="0.1524" layer="91"/>
-<junction x="609.6" y="-26.035"/>
+<wire x1="600.075" y1="-26.035" x2="614.045" y2="-26.035" width="0.1524" layer="91"/>
+<wire x1="614.045" y1="-26.035" x2="614.045" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="U8" gate="G$5" pin="VDD"/>
-<wire x1="688.975" y1="-30.48" x2="688.975" y2="-26.035" width="0.1524" layer="91"/>
-<wire x1="688.975" y1="-26.035" x2="631.19" y2="-26.035" width="0.1524" layer="91"/>
-<junction x="631.19" y="-26.035"/>
+<wire x1="614.045" y1="-33.02" x2="614.045" y2="-40.005" width="0.1524" layer="91"/>
+<wire x1="687.705" y1="-30.48" x2="687.705" y2="-26.035" width="0.1524" layer="91"/>
+<wire x1="687.705" y1="-26.035" x2="614.045" y2="-26.035" width="0.1524" layer="91"/>
+<junction x="614.045" y="-26.035"/>
+<pinref part="C33" gate="G$1" pin="1"/>
+<wire x1="611.505" y1="-33.02" x2="614.045" y2="-33.02" width="0.1524" layer="91"/>
+<junction x="614.045" y="-33.02"/>
 </segment>
 </net>
 <net name="N$51" class="0">
 <segment>
-<pinref part="D2" gate="G$1" pin="A"/>
 <pinref part="U3" gate="-A" pin="Y"/>
-<wire x1="648.335" y1="-40.005" x2="644.525" y2="-40.005" width="0.1524" layer="91"/>
 <pinref part="R33" gate="G$1" pin="1"/>
-<wire x1="644.525" y1="-40.005" x2="641.35" y2="-40.005" width="0.1524" layer="91"/>
-<wire x1="647.065" y1="-31.75" x2="644.525" y2="-31.75" width="0.1524" layer="91"/>
-<wire x1="644.525" y1="-31.75" x2="644.525" y2="-40.005" width="0.1524" layer="91"/>
-<junction x="644.525" y="-40.005"/>
+<wire x1="630.555" y1="-46.355" x2="627.38" y2="-46.355" width="0.1524" layer="91"/>
+<pinref part="D2" gate="G$1" pin="A"/>
+<wire x1="627.38" y1="-46.355" x2="624.205" y2="-46.355" width="0.1524" layer="91"/>
+<wire x1="631.825" y1="-38.735" x2="627.38" y2="-38.735" width="0.1524" layer="91"/>
+<wire x1="627.38" y1="-38.735" x2="627.38" y2="-46.355" width="0.1524" layer="91"/>
+<junction x="627.38" y="-46.355"/>
 </segment>
 </net>
-<net name="N$52" class="0">
+<net name="!ESP_EN" class="0">
 <segment>
 <pinref part="R33" gate="G$1" pin="2"/>
-<wire x1="657.225" y1="-31.75" x2="659.765" y2="-31.75" width="0.1524" layer="91"/>
-<wire x1="659.765" y1="-31.75" x2="659.765" y2="-40.005" width="0.1524" layer="91"/>
-<pinref part="D2" gate="G$1" pin="K"/>
-<wire x1="659.765" y1="-40.005" x2="655.955" y2="-40.005" width="0.1524" layer="91"/>
-<wire x1="659.765" y1="-40.005" x2="665.48" y2="-40.005" width="0.1524" layer="91"/>
-<junction x="659.765" y="-40.005"/>
 <pinref part="C35" gate="G$1" pin="1"/>
-<wire x1="665.48" y1="-46.99" x2="665.48" y2="-46.355" width="0.1524" layer="91"/>
+<wire x1="643.89" y1="-48.895" x2="643.89" y2="-46.355" width="0.1524" layer="91"/>
 <pinref part="U8" gate="-A" pin="!OE"/>
-<wire x1="665.48" y1="-46.355" x2="665.48" y2="-40.005" width="0.1524" layer="91"/>
-<wire x1="691.515" y1="-43.815" x2="691.515" y2="-46.355" width="0.1524" layer="91"/>
-<wire x1="691.515" y1="-46.355" x2="665.48" y2="-46.355" width="0.1524" layer="91"/>
-<junction x="665.48" y="-46.355"/>
+<wire x1="643.89" y1="-46.355" x2="640.715" y2="-46.355" width="0.1524" layer="91"/>
+<wire x1="690.245" y1="-43.815" x2="690.245" y2="-46.355" width="0.1524" layer="91"/>
+<junction x="643.89" y="-46.355"/>
+<pinref part="D2" gate="G$1" pin="K"/>
+<wire x1="643.89" y1="-46.355" x2="690.245" y2="-46.355" width="0.1524" layer="91"/>
+<wire x1="639.445" y1="-38.735" x2="643.89" y2="-38.735" width="0.1524" layer="91"/>
+<wire x1="643.89" y1="-38.735" x2="643.89" y2="-46.355" width="0.1524" layer="91"/>
+<label x="679.45" y="-45.72" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U8" gate="-B" pin="!OE"/>
+<wire x1="687.07" y1="-76.2" x2="687.07" y2="-78.74" width="0.1524" layer="91"/>
+<wire x1="687.07" y1="-78.74" x2="679.45" y2="-78.74" width="0.1524" layer="91"/>
+<label x="679.45" y="-78.105" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U8" gate="-C" pin="!OE"/>
+<wire x1="690.245" y1="-93.345" x2="690.245" y2="-96.52" width="0.1524" layer="91"/>
+<wire x1="690.245" y1="-96.52" x2="679.45" y2="-96.52" width="0.1524" layer="91"/>
+<label x="679.45" y="-95.885" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U8" gate="-D" pin="!OE"/>
+<wire x1="690.245" y1="-111.125" x2="690.245" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="690.245" y1="-114.3" x2="679.45" y2="-114.3" width="0.1524" layer="91"/>
+<label x="679.45" y="-113.665" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="ESP_TMS" class="0">
 <segment>
 <pinref part="U8" gate="-A" pin="Y"/>
-<wire x1="697.865" y1="-36.83" x2="701.675" y2="-36.83" width="0.1524" layer="91"/>
-<label x="701.675" y="-36.83" size="1.27" layer="95" xref="yes"/>
+<wire x1="696.595" y1="-36.83" x2="705.485" y2="-36.83" width="0.1524" layer="91"/>
+<label x="705.485" y="-36.83" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ESP_TDO" class="0">
 <segment>
 <pinref part="U8" gate="-B" pin="A"/>
-<wire x1="697.23" y1="-67.31" x2="699.135" y2="-67.31" width="0.1524" layer="91"/>
-<label x="699.135" y="-67.31" size="1.27" layer="95" xref="yes"/>
+<wire x1="695.96" y1="-69.215" x2="705.485" y2="-69.215" width="0.1524" layer="91"/>
+<label x="705.485" y="-69.215" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ESP_TDI" class="0">
 <segment>
 <pinref part="U8" gate="-C" pin="Y"/>
-<wire x1="697.865" y1="-81.915" x2="700.405" y2="-81.915" width="0.1524" layer="91"/>
-<label x="700.405" y="-81.915" size="1.27" layer="95" xref="yes"/>
+<wire x1="696.595" y1="-86.36" x2="705.485" y2="-86.36" width="0.1524" layer="91"/>
+<label x="705.485" y="-86.36" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ESP_TCK" class="0">
 <segment>
 <pinref part="U8" gate="-D" pin="Y"/>
-<wire x1="697.865" y1="-97.155" x2="700.405" y2="-97.155" width="0.1524" layer="91"/>
-<label x="700.405" y="-97.155" size="1.27" layer="95" xref="yes"/>
+<wire x1="696.595" y1="-104.14" x2="705.485" y2="-104.14" width="0.1524" layer="91"/>
+<label x="705.485" y="-104.14" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
